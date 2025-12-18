@@ -2,19 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>E-Commerce Store</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-box {
+      background: #fff;
+      padding: 25px;
+      width: 300px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>My Store</h1>
-  <a href="cart.html">🛒 Cart</a>
-</header>
+  <div class="form-box">
+    <h2>Register</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
 
-<main id="product-list"></main>
-
-<script src="js/products.js"></script>
-<script src="js/cart.js"></script>
 </body>
 </html>
