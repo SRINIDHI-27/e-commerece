@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="index.html">← Back</a>
+
+<div id="product-details"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+  const id = new URLSearchParams(window.location.search).get("id");
+  const product = products.find(p => p.id == id);
+
+  document.getElementById("product-details").innerHTML = `
+    <h2>${product.name}</h2>
+    <img src="${product.image}">
+    <p>$${product.price}</p>
+    <button onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</button>
+  `;
+</script>
+
+</body>
+</html>
